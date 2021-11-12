@@ -1,20 +1,19 @@
-function gerar_cor_hexadecimal()
-{
-  return '#' + parseInt((Math.random() * 0xFFFFFF))
-    .toString(16)
-    .padStart(6, '0');
+function gerar_cor() {
+  let r = parseInt(Math.random() * 255);
+  let g = parseInt(Math.random() * 255);
+  let b = parseInt(Math.random() * 255);
+  
+  return 'rgb('+r+','+g+','+b+')';
 }
 
-let cores = [];
+cores = [];
 
-for(var i = 0; i < 10; i++){
-    
-cores[i] = gerar_cor_hexadecimal(); 
+for(let i = 0; i < 10; i++){
+
+cores[i] = gerar_cor();
 
 }
 
-cores;
+console.log(cores);
 
-
-
-
+document.body.style.backgroundCOlor = 'rgb('+r+','+g+','+b+')';
